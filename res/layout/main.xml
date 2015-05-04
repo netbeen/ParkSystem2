@@ -1,13 +1,62 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:orientation="vertical"
     tools:context="${relativePackage}.${activityClass}" >
 
-	<TabHost 
-	    android:id="@+id/mainTableHost"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent">
-	    
-	</TabHost>
-</RelativeLayout>
+    <FrameLayout
+        android:id="@+id/contentAera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" 
+        android:background="@color/themeBackground">
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomTabButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_bg_w"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/bottomTabTextview1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/radio_icon1"
+            android:gravity="center"
+            android:text="@string/buttomButtonText1" />
+
+        <TextView
+            android:id="@+id/bottomTabTextview2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/radio_icon2"
+            android:gravity="center"
+            android:text="@string/buttomButtonText2" />
+
+        <TextView
+            android:id="@+id/bottomTabTextview3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/radio_icon3"
+            android:gravity="center"
+            android:text="@string/buttomButtonText3" />
+
+        <TextView
+            android:id="@+id/bottomTabTextview4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/radio_icon4"
+            android:gravity="center"
+            android:text="@string/buttomButtonText4" />
+    </LinearLayout>
+
+</LinearLayout>

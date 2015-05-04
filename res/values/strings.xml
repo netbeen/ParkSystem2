@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="fakeContentDescription"></string>
+    
     <string name="app_name">ParkSystem2</string>
     <string name="title_activity_login">登陆</string>
     <string name="usernameHint">手机号码</string>
@@ -10,5 +12,10 @@
     <string name="registNowText">立即注册</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="hello_world">Hello world!</string>
+    
+    <string name="buttomButtonText1">停车</string>
+    <string name="buttomButtonText2">附近</string>
+    <string name="buttomButtonText3">服务</string>
+    <string name="buttomButtonText4">我的</string>
 
 </resources>
