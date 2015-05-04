@@ -7,10 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class Fragment4 extends Fragment {
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		View messageLayout = inflater.inflate(R.layout.fragment4,
-				container, false);
-		return messageLayout;
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View layout = inflater.inflate(R.layout.fragment4, container, false);
+		return layout;
 	}
 }

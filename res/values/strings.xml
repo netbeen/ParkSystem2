@@ -4,6 +4,7 @@
     <string name="fakeContentDescription"></string>
     
     <string name="app_name">ParkSystem2</string>
+    
     <string name="title_activity_login">登陆</string>
     <string name="usernameHint">手机号码</string>
     <string name="passwordHint">登陆密码</string>
@@ -17,5 +18,10 @@
     <string name="buttomButtonText2">附近</string>
     <string name="buttomButtonText3">服务</string>
     <string name="buttomButtonText4">我的</string>
+    
+    <string name="title_fragment1">停车</string>
+    <string name="title_fragment2">附近</string>
+    <string name="title_fragment3">服务</string>
+    <string name="title_fragment4">我的</string>
 
 </resources>
