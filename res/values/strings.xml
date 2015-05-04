@@ -2,7 +2,13 @@
 <resources>
 
     <string name="app_name">ParkSystem2</string>
+    <string name="title_activity_login">登陆</string>
+    <string name="usernameHint">手机号码</string>
+    <string name="passwordHint">登陆密码</string>
+    <string name="loginButtonText">登陆</string>
+    <string name="forgetPasswordText">忘记密码</string>
+    <string name="registNowText">立即注册</string>
+    <string name="title_activity_main">MainActivity</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_login">LoginActivity</string>
 
 </resources>

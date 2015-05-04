@@ -2,11 +2,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/themeBackground"
     tools:context="${relativePackage}.${activityClass}" >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/loginTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title_activity_login" />
+        android:background="@color/themeColor"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/title_activity_login"
+        android:textColor="@color/themeBackground"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/loginTitle"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        tools:context="${relativePackage}.${activityClass}" >
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_bg_up"
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/user_icon"
+            android:hint="@string/usernameHint"
+            android:padding="15dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/usernameEditText"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/login_bg_down"
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/pw_icon"
+            android:hint="@string/passwordHint"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordEditText"
+            android:background="@drawable/login_button_selector"
+            android:padding="10dp"
+            android:text="@string/loginButtonText"
+            android:textColor="@color/themeBackground"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/otherLoginFunction"
+            android:layout_below="@id/loginButton"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:textColor="@color/themeColor"
+                android:text="@string/forgetPasswordText"/>
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" 
+                android:layout_weight="1"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:textColor="@color/themeColor"
+                android:text="@string/registNowText"/>
+        </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
