@@ -5,17 +5,328 @@
     android:background="@color/themeBackground"
     tools:context="${relativePackage}.${activityClass}" >
 
+    <!-- 标题：我要停车 + 返回按钮 -->
     <TextView
         android:id="@+id/main_1_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/themeColor"
+        android:drawableStart="@drawable/title_back_n"
         android:gravity="center"
-        android:layout_alignBaseline="@id/main_1_title"
         android:padding="10dp"
         android:text="@string/title_main_1"
         android:textColor="@color/themeBackground"
-        android:textSize="20sp"
-        android:drawableStart="@drawable/title_back_n" />
+        android:textSize="20sp" />
+
+    <!-- 主场景布局 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_1_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp" >
+
+        <!-- 泊位编号 -->
+        <TextView
+            android:id="@+id/main_1_packNumberTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:text="@string/parkNumberText"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <!-- 泊位编号六联布局 -->
+        <LinearLayout
+            android:id="@+id/main_1_parkNumberLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_1_packNumberTextView"
+            android:layout_marginBottom="15dp" >
+
+            <EditText
+                android:id="@+id/packNumber1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="phone"
+                android:labelFor="@id/packNumber1"
+                android:maxLength="1"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/packNumber2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:labelFor="@id/packNumber2"
+                android:maxLength="1"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/packNumber3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:labelFor="@id/packNumber3"
+                android:maxLength="1" 
+                android:textSize="25sp"/>
+
+            <EditText
+                android:id="@+id/packNumber4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:labelFor="@id/packNumber4"
+                android:maxLength="1" 
+                android:textSize="25sp"/>
+
+            <EditText
+                android:id="@+id/packNumber5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:labelFor="@id/packNumber5"
+                android:maxLength="1"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/packNumber6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:labelFor="@id/packNumber6"
+                android:maxLength="1"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <!-- 购买时长 -->
+        <TextView
+            android:id="@+id/parkTimeToBuyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_1_parkNumberLayout"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:text="@string/parkTimeToBuyText"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <!-- 向上箭头布局 -->
+        <LinearLayout
+            android:id="@+id/main_1_SelectTimeUpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/parkTimeToBuyText"
+            android:layout_margin="0dp"
+            android:orientation="horizontal"
+            android:padding="0dp" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/fakeContentDescription"
+                android:src="@drawable/timeawup"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/fakeContentDescription"
+                android:src="@drawable/timeawup" 
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+        <!-- 时间框布局 -->
+        <LinearLayout
+            android:id="@+id/main_1_SelectTimeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_1_SelectTimeUpLayout"
+            android:layout_margin="0dp"
+            android:orientation="horizontal"
+            android:padding="0dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:gravity="end"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:text="小时"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:textSize="25sp"
+                 />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="11"
+                android:gravity="end"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:text="分钟"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <!-- 向下箭头布局 -->
+        <LinearLayout
+            android:id="@+id/main_1_SelectTimeDownLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_1_SelectTimeLayout"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:layout_marginBottom="15dp" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/fakeContentDescription"
+                android:src="@drawable/timeawdown" 
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/fakeContentDescription"
+                android:src="@drawable/timeawdown" 
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                />
+        </LinearLayout>
+        
+        
+        <!-- 应付停车费 -->
+        <TextView
+            android:id="@+id/main_1_shouldPayText"
+            android:layout_below="@id/main_1_SelectTimeDownLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:text="@string/main_1_shouldPayText"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+             />
+        
+        <!-- 0.00  -->
+        <TextView
+            android:id="@+id/main_1_shouldPay"
+            android:layout_below="@id/main_1_shouldPayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:text="0.00"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="17sp" />
+        
+        <!-- 元  -->
+        <TextView
+            android:id="@+id/main_1_shouldPayYuan"
+            android:layout_below="@id/main_1_shouldPayText"
+            android:layout_toEndOf="@id/main_1_shouldPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:text=" 元"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="17sp" />
+        
+        <!-- 账户余额  -->
+        <TextView
+            android:id="@+id/main_1_balanceText"
+            android:layout_below="@id/main_1_shouldPayText"
+            android:layout_toEndOf="@id/main_1_shouldPayYuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="50dp"
+            android:gravity="start"
+            android:text="账户余额"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="17sp" />
+        
+        <!-- 0.00  -->
+        <TextView
+            android:id="@+id/main_1_balance"
+            android:layout_below="@id/main_1_shouldPayText"
+            android:layout_toEndOf="@id/main_1_balanceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:text="0.00"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="17sp" />
+        
+        <!-- 元  -->
+        <TextView
+            android:id="@+id/main_1_balanceYuan"
+            android:layout_below="@id/main_1_shouldPayText"
+            android:layout_toEndOf="@id/main_1_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:text="元"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="17sp" />
+        
+        <!-- 确认按钮 -->
+        <Button
+            android:id="@+id/comfirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_1_shouldPay"
+            android:background="@drawable/login_button_selector"
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
+            android:text="确认"
+            android:textColor="@color/themeBackground"
+            android:textSize="20sp" />
+      
+    </RelativeLayout>
+    <!-- 主体布局结束 -->
 
 </RelativeLayout>

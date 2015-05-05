@@ -25,5 +25,8 @@
     <string name="title_fragment4">我的</string>
     
     <string name="title_main_1">我要停车</string>
+    <string name="parkNumberText">泊位编号</string>
+    <string name="parkTimeToBuyText">购买时长</string>
+    <string name="main_1_shouldPayText">应付停车费</string>
 
 </resources>

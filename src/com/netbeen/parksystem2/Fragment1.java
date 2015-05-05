@@ -44,23 +44,17 @@ public class Fragment1 extends ListFragment {
 		
 		switch (position) {
 		case 0:
-			Log.d("YY","0");
 			startActivity(new Intent(getActivity(), Main_1_Activity.class));
 			break;
 		case 1:
-			Log.d("YY","1");
 			break;
 		case 2:
-			Log.d("YY","2");
 			break;
 		case 3:
-			Log.d("YY","3");
 			break;
 		case 4:
-			Log.d("YY","4");
 			break;
 		case 5:
-			Log.d("YY","5");
 		}
 	}
 	
