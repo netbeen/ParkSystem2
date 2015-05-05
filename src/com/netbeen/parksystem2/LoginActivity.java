@@ -20,9 +20,8 @@ public class LoginActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setClass(LoginActivity.this, MainActivity.class);
-				startActivity(intent);
+				
+				startActivity(new Intent(LoginActivity.this, MainActivity.class));
 				LoginActivity.this.finish();
 			}
 		});

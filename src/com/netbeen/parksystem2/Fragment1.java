@@ -5,20 +5,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import android.app.Fragment;
 import android.app.ListFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 public class Fragment1 extends ListFragment {
-	private ListView selfList;
-	private SimpleAdapter adapter;
 
 	private static final String TAG = "##MyListFragment##";
 	final String[] from = new String[] {"title", "info","icon"};
@@ -40,9 +37,35 @@ public class Fragment1 extends ListFragment {
 		this.setListAdapter(adapter);
 	}
 	
+	@Override
+	public void onListItemClick(ListView l, View v, int position, long id) {
+		// TODO Auto-generated method stub
+		super.onListItemClick(l, v, position, id);
+		
+		switch (position) {
+		case 0:
+			Log.d("YY","0");
+			startActivity(new Intent(getActivity(), Main_1_Activity.class));
+			break;
+		case 1:
+			Log.d("YY","1");
+			break;
+		case 2:
+			Log.d("YY","2");
+			break;
+		case 3:
+			Log.d("YY","3");
+			break;
+		case 4:
+			Log.d("YY","4");
+			break;
+		case 5:
+			Log.d("YY","5");
+		}
+	}
+	
 	private List<Map<String, Object>> getSimpleData() {
         List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-
         Map<String, Object> map;
         
         map = new HashMap<String, Object>();

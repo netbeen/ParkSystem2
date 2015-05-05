@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeBackground"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/main_1_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/themeColor"
+        android:gravity="center"
+        android:layout_alignBaseline="@id/main_1_title"
+        android:padding="10dp"
+        android:text="@string/title_main_1"
+        android:textColor="@color/themeBackground"
+        android:textSize="20sp"
+        android:drawableStart="@drawable/title_back_n" />
+
+</RelativeLayout>

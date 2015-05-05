@@ -11,7 +11,6 @@ import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 public class MainActivity extends Activity implements OnClickListener {
-
 	private Fragment1 fragment1;
 	private Fragment2 fragment2;
 	private Fragment3 fragment3;
@@ -127,9 +126,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		transaction.commit();
 	}
 
-	/**
-	 * 清除掉所有的选中状态。
-	 */
 	private void clearSelection() {
 		Drawable drawable;
 
@@ -150,12 +146,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		textview4.setCompoundDrawables(null, drawable, null, null);
 	}
 
-	/**
-	 * 将所有的Fragment都置为隐藏状态。
-	 * 
-	 * @param transaction
-	 *            用于对Fragment执行操作的事务
-	 */
 	private void hideFragments(FragmentTransaction transaction) {
 		if (fragment1 != null)
 			transaction.hide(fragment1);

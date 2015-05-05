@@ -23,5 +23,7 @@
     <string name="title_fragment2">附近</string>
     <string name="title_fragment3">服务</string>
     <string name="title_fragment4">我的</string>
+    
+    <string name="title_main_1">我要停车</string>
 
 </resources>
