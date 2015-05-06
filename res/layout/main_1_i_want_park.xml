@@ -141,8 +141,9 @@
                 android:layout_weight="1"
                 android:contentDescription="@string/fakeContentDescription"
                 android:src="@drawable/timeawup"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp" />
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:background="@drawable/add_board_bg"  />
 
             <ImageView
                 android:layout_width="0dp"
@@ -150,8 +151,9 @@
                 android:layout_weight="1"
                 android:contentDescription="@string/fakeContentDescription"
                 android:src="@drawable/timeawup" 
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"/>
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:background="@drawable/add_board_bg"  />
         </LinearLayout>
 
         <!-- 时间框布局 -->
@@ -160,7 +162,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/main_1_SelectTimeUpLayout"
-            android:layout_margin="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:orientation="horizontal"
             android:padding="0dp" >
 
@@ -212,7 +215,8 @@
             android:layout_marginTop="0dp"
             android:orientation="horizontal"
             android:padding="0dp"
-            android:layout_marginBottom="15dp" >
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/add_board_bg"  >
 
             <ImageView
                 android:layout_width="0dp"
@@ -220,8 +224,9 @@
                 android:layout_weight="1"
                 android:contentDescription="@string/fakeContentDescription"
                 android:src="@drawable/timeawdown" 
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"/>
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:background="@drawable/add_board_bg" />
 
             <ImageView
                 android:layout_width="0dp"
@@ -229,8 +234,8 @@
                 android:layout_weight="1"
                 android:contentDescription="@string/fakeContentDescription"
                 android:src="@drawable/timeawdown" 
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
                 />
         </LinearLayout>
         
